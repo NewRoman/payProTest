@@ -1,0 +1,22 @@
+.gradient-text {
+    color: #fff;
+    background: linear-gradient(to right,#115cac,#ff2368);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+.gradient-background {
+    background: linear-gradient(to right,#115cac,#ff2368);
+}
+
+.link.active {
+    color: #fc2e6e!important;
+    text-decoration: none;
+}
+.link-in-text {
+    border-bottom: 2px solid #e62260;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none!important;
+}
+

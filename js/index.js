@@ -1,3 +1,3 @@
-document.ready(function(){
-    console.log('here we are')
-});
+// $.ready(function(){
+//     console.log('here we are')
+// });

@@ -1,7 +1,21 @@
-body {
-    background: red;
+@import "utils.css";
 
-    font-family: 'Roboto', sans-serif;
+body {
+    position: relative;
+    background: #0d0d0d;
+
+    font-family: Roboto;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #fff;
+
+    letter-spacing: .5px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+
+    /*font-family: 'Roboto', sans-serif;*/
 }
 
 /* fallback */
