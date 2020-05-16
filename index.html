@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Test product page</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-<!--    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">-->
     <link rel="stylesheet" href="css/index.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
 </head>
 <body>
 <header>
@@ -43,41 +42,578 @@
         </div>
     </div>
 </header>
-<div class="ui-elements">
-    <h3>
-        ui elements manual
-    </h3>
-    <h1>
-        <span class="gradient-text">
-            hello i am a gradient test with class=gradient-text
-        </span>
-        <p>
-            here is the material icons bundle icon
-            <span class="material-icons">
-                alarm_on
-            </span>
-        </p>
-    </h1>
-    <div>
-        <p>
-            Hello i am a <a class="link-in-text" href="#">link in text </a> with class=link-in-text
-        </p>
-    </div>
-    <h2 class="gradient-background">
-        <p>
-            Gradient background for block
-            just add class=gradient-background to the block
-        </p>
-    </h2>
+    <div class="main-content">
+        <div class="container">
+            <div class="form-block clearfix">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6">
+                        <div class="personal-info billing-info">
+                            <div class="row sub-header-row">
+                                <div class="col-md-12">
+                                    <div class="sub-header">Платіжна інформація <i class="ppg-help" data-toggle="popover" data-content="Для успішної перевірки замовлення, будь ласка, переконайтеся, що Ваше ім’я та прізвище наведені правильно. Ваші дані залишаються конфіденціальними і не публікуються. Щоб отримати більш детальну інформацію, будь ласка, ознайомтесь із нашою “Політикою Конфіденційності”. Поля позначені зірочкою (*) є обов’язковими для заповнення." data-original-title="" title=""></i></div>
+                                </div>
+                            </div>
+                            <div class="personal-inner">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group  corporate-block">
+                                            <div class="col-lg-12">
+                                                <label class="checkbox-label">Корпоративна купівля
+                                                    <input type="checkbox" value="True" id="corporate" name="use-company-purchase"/>
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group  company-name-block hidden corporate ">
+                                                    <div class="col-lg-12">
+                                                        <input type="text" class="form-control input-sm" id="company" name="billing-company-name" placeholder="Назва компанії *" required="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group  firstname-block ">
+                                                    <div class="col-lg-12">
+                                                        <input placeholder="Ім'я *" type="text" class="form-control input-sm" id="firstname" value="Oleh" name="billing-first-name" required="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group  lastname-block ">
+                                                    <div class="col-lg-12">
+                                                        <input type="text" class="form-control input-sm" id="lastname" value="Savchuk" name="billing-last-name" required="" placeholder="Прізвище *">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
 
-    <h2>
-        i am an <a class="link active" href="#">active link</a> with active color with class=active
-    </h2>
-</div>
+                                        <div class="form-group  email-block ">
+                                            <div class="col-lg-12" data-content="">
+                                                <input type="text" placeholder="Адреса електронної пошти *" class="form-control input-sm" id="email" value="olehsav@gmoai..com" name="billing-email" required="">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group  address-block ">
+                                            <div class="col-lg-12" data-content="">
+                                                <input type="text" placeholder="Повна адреса *" class="form-control input-sm" id="address" value="17 test street name" name="billing-address" required="">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+
+                                                <div class="form-group  city-block ">
+                                                    <div class="col-lg-12" data-content="">
+                                                        <input type="text" placeholder="Місто *" class="form-control input-sm" id="city" value="Novyy Yarychiv" name="billing-city" required="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group  zip-block ">
+                                                    <div class="col-lg-12">
+                                                        <input type="text" placeholder="Індекс" class="form-control input-sm" id="zip" required="" value="23222" name="billing-zip">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group  country-block ">
+                                                    <div class="col-lg-12">
+                                                           <select class="form-control input-sm select2-source" id="country" data-action="CountryChange" name="billing-country" tabindex="-1" title="Країна*">
+                                                            <option value="AU" alt="AU" data-country-rate="0">Австралія</option>
+                                                            <option value="AT" alt="AT" data-country-rate="0">Австрія</option>
+                                                            <option value="AZ" alt="AZ" data-country-rate="0">Азербайджан</option>
+                                                            <option value="AX" alt="AX" data-country-rate="0">Аландські острови</option>
+                                                            <option value="AL" alt="AL" data-country-rate="0">Албанія</option>
+                                                            <option value="DZ" alt="DZ" data-country-rate="0">Алжир</option>
+                                                            <option value="AS" alt="AS" data-country-rate="0">Американське Самоа</option>
+                                                            <option value="AI" alt="AI" data-country-rate="0">Ангілья</option>
+                                                            <option value="AO" alt="AO" data-country-rate="0">Ангола</option>
+                                                            <option value="AD" alt="AD" data-country-rate="0">Андорра</option>
+                                                            <option value="AQ" alt="AQ" data-country-rate="0">Антарктика</option>
+                                                            <option value="AG" alt="AG" data-country-rate="0">Антигуа і Барбуда</option>
+                                                            <option value="AR" alt="AR" data-country-rate="0">Аргентина</option>
+                                                            <option value="AW" alt="AW" data-country-rate="0">Аруба</option>
+                                                            <option value="AF" alt="AF" data-country-rate="0">Афганістан</option>
+                                                            <option value="BS" alt="BS" data-country-rate="0">Багамські острови</option>
+                                                            <option value="BD" alt="BD" data-country-rate="0">Бангладеш</option>
+                                                            <option value="BB" alt="BB" data-country-rate="0">Барбадос</option>
+                                                            <option value="BH" alt="BH" data-country-rate="0">Бахрейн</option>
+                                                            <option value="BZ" alt="BZ" data-country-rate="0">Беліз</option>
+                                                            <option value="BE" alt="BE" data-country-rate="0">Бельгія</option>
+                                                            <option value="BJ" alt="BJ" data-country-rate="0">Бенін</option>
+                                                            <option value="BM" alt="BM" data-country-rate="0">Бермудські острови</option>
+                                                            <option value="BY" alt="BY" data-country-rate="0">Білорусь</option>
+                                                            <option value="BG" alt="BG" data-country-rate="0">Болгарія</option>
+                                                            <option value="BO" alt="BO" data-country-rate="0">Болівія</option>
+                                                            <option value="BQ" alt="BQ" data-country-rate="0">Бонайре, Сінт-Естатіус і Саба</option>
+                                                            <option value="BA" alt="BA" data-country-rate="0">Боснія і Герцеговина</option>
+                                                            <option value="BW" alt="BW" data-country-rate="0">Ботсвана</option>
+                                                            <option value="BR" alt="BR" data-country-rate="0">Бразилія</option>
+                                                            <option value="IO" alt="IO" data-country-rate="0">Британська територія Індійського океану</option>
+                                                            <option value="BN" alt="BN" data-country-rate="0">Бруней-Даруссалам</option>
+                                                            <option value="BF" alt="BF" data-country-rate="0">Буркіна-Фасо</option>
+                                                            <option value="BI" alt="BI" data-country-rate="0">Бурунді</option>
+                                                            <option value="BT" alt="BT" data-country-rate="0">Бутан</option>
+                                                            <option value="VU" alt="VU" data-country-rate="0">Вануату</option>
+                                                            <option value="GB" alt="GB" data-country-rate="0">Великобританія</option>
+                                                            <option value="VE" alt="VE" data-country-rate="0">Венесуела</option>
+                                                            <option value="VN" alt="VN" data-country-rate="0">В'єтнам</option>
+                                                            <option value="VG" alt="VG" data-country-rate="0">Віргінські острови, Британські</option>
+                                                            <option value="VI" alt="VI" data-country-rate="0">Віргінські острови, США</option>
+                                                            <option value="AM" alt="AM" data-country-rate="0">Вірменія</option>
+                                                            <option value="GA" alt="GA" data-country-rate="0">Габон</option>
+                                                            <option value="GY" alt="GY" data-country-rate="0">Гайана</option>
+                                                            <option value="HT" alt="HT" data-country-rate="0">Гаїті</option>
+                                                            <option value="GM" alt="GM" data-country-rate="0">Гамбія</option>
+                                                            <option value="GH" alt="GH" data-country-rate="0">Гана</option>
+                                                            <option value="GP" alt="GP" data-country-rate="0">Гваделупа</option>
+                                                            <option value="GT" alt="GT" data-country-rate="0">Гватемала</option>
+                                                            <option value="GN" alt="GN" data-country-rate="0">Гвінея</option>
+                                                            <option value="GW" alt="GW" data-country-rate="0">Гвінея-Бісау</option>
+                                                            <option value="GG" alt="GG" data-country-rate="0">Гернсі</option>
+                                                            <option value="GI" alt="GI" data-country-rate="0">Гібралтар</option>
+                                                            <option value="HN" alt="HN" data-country-rate="0">Гондурас</option>
+                                                            <option value="HK" alt="HK" data-country-rate="0">Гонконг</option>
+                                                            <option value="GD" alt="GD" data-country-rate="0">Гренада</option>
+                                                            <option value="GL" alt="GL" data-country-rate="0">Гренландія</option>
+                                                            <option value="GR" alt="GR" data-country-rate="0">Греція</option>
+                                                            <option value="GE" alt="GE" data-country-rate="0">Грузія</option>
+                                                            <option value="GU" alt="GU" data-country-rate="0">Гуам</option>
+                                                            <option value="DK" alt="DK" data-country-rate="0">Данія</option>
+                                                            <option value="JE" alt="JE" data-country-rate="0">Джерсі</option>
+                                                            <option value="DJ" alt="DJ" data-country-rate="0">Джибуті</option>
+                                                            <option value="DG" alt="DG" data-country-rate="0">Дієго-Гарсія</option>
+                                                            <option value="DM" alt="DM" data-country-rate="0">Домініка</option>
+                                                            <option value="DO" alt="DO" data-country-rate="0">Домініканська Республіка</option>
+                                                            <option value="EC" alt="EC" data-country-rate="0">Еквадор</option>
+                                                            <option value="GQ" alt="GQ" data-country-rate="0">Екваторіальна Гвінея</option>
+                                                            <option value="EE" alt="EE" data-country-rate="0">Естонія</option>
+                                                            <option value="ET" alt="ET" data-country-rate="0">Ефіопія</option>
+                                                            <option value="EG" alt="EG" data-country-rate="0">Єгипет</option>
+                                                            <option value="ZM" alt="ZM" data-country-rate="0">Замбія</option>
+                                                            <option value="EH" alt="EH" data-country-rate="0">Західна Сахара</option>
+                                                            <option value="UM" alt="UM" data-country-rate="0">Зовнішні малі острови США</option>
+                                                            <option value="JO" alt="JO" data-country-rate="0">Йорданія</option>
+                                                            <option value="IL" alt="IL" data-country-rate="0">Ізраїль</option>
+                                                            <option value="IN" alt="IN" data-country-rate="0">Індія</option>
+                                                            <option value="ID" alt="ID" data-country-rate="0">Індонезія</option>
+                                                            <option value="IE" alt="IE" data-country-rate="0">Ірландія</option>
+                                                            <option value="IS" alt="IS" data-country-rate="0">Ісландія</option>
+                                                            <option value="ES" alt="ES" data-country-rate="0">Іспанія</option>
+                                                            <option value="IT" alt="IT" data-country-rate="0">Італія</option>
+                                                            <option value="CV" alt="CV" data-country-rate="0">Кабо-Верде</option>
+                                                            <option value="KZ" alt="KZ" data-country-rate="0">Казахстан</option>
+                                                            <option value="KY" alt="KY" data-country-rate="0">Кайманові Острови</option>
+                                                            <option value="KH" alt="KH" data-country-rate="0">Камбоджа</option>
+                                                            <option value="CM" alt="CM" data-country-rate="0">Камерун</option>
+                                                            <option value="CA" alt="CA" data-country-rate="0">Канада</option>
+                                                            <option value="IC" alt="IC" data-country-rate="0">Канарскі Острови</option>
+                                                            <option value="QA" alt="QA" data-country-rate="0">Катар</option>
+                                                            <option value="KE" alt="KE" data-country-rate="0">Кенія</option>
+                                                            <option value="KG" alt="KG" data-country-rate="0">Киргизія</option>
+                                                            <option value="CN" alt="CN" data-country-rate="0">Китай</option>
+                                                            <option value="CY" alt="CY" data-country-rate="0">Кіпр</option>
+                                                            <option value="KI" alt="KI" data-country-rate="0">Кірибаті</option>
+                                                            <option value="CP" alt="CP" data-country-rate="0">Кліппертон</option>
+                                                            <option value="CC" alt="CC" data-country-rate="0">Кокосові (Кілінг) острови</option>
+                                                            <option value="CO" alt="CO" data-country-rate="0">Колумбія</option>
+                                                            <option value="KM" alt="KM" data-country-rate="0">Коморські острови</option>
+                                                            <option value="KR" alt="KR" data-country-rate="0">Корея, Республіка</option>
+                                                            <option value="XK" alt="XK" data-country-rate="0">Косово</option>
+                                                            <option value="CR" alt="CR" data-country-rate="0">Коста-Ріка</option>
+                                                            <option value="KW" alt="KW" data-country-rate="0">Кувейт</option>
+                                                            <option value="CW" alt="CW" data-country-rate="0">Кюрасао</option>
+                                                            <option value="LA" alt="LA" data-country-rate="0">Лаоська Народно-Демократична Республіка</option>
+                                                            <option value="LV" alt="LV" data-country-rate="0">Латвія</option>
+                                                            <option value="LS" alt="LS" data-country-rate="0">Лесото</option>
+                                                            <option value="LT" alt="LT" data-country-rate="0">Литва</option>
+                                                            <option value="LI" alt="LI" data-country-rate="0">Ліхтенштейн</option>
+                                                            <option value="LU" alt="LU" data-country-rate="0">Люксембург</option>
+                                                            <option value="MU" alt="MU" data-country-rate="0">Маврикій</option>
+                                                            <option value="MR" alt="MR" data-country-rate="0">Мавританія</option>
+                                                            <option value="MG" alt="MG" data-country-rate="0">Мадагаскар</option>
+                                                            <option value="YT" alt="YT" data-country-rate="0">Майотта</option>
+                                                            <option value="MO" alt="MO" data-country-rate="0">Макао</option>
+                                                            <option value="MK" alt="MK" data-country-rate="0">Македонія, Республіка</option>
+                                                            <option value="MW" alt="MW" data-country-rate="0">Малаві</option>
+                                                            <option value="MY" alt="MY" data-country-rate="0">Малайзія</option>
+                                                            <option value="ML" alt="ML" data-country-rate="0">Малі</option>
+                                                            <option value="MV" alt="MV" data-country-rate="0">Мальдіви</option>
+                                                            <option value="MT" alt="MT" data-country-rate="0">Мальта</option>
+                                                            <option value="MA" alt="MA" data-country-rate="0">Марокко</option>
+                                                            <option value="MQ" alt="MQ" data-country-rate="0">Мартиніка</option>
+                                                            <option value="MH" alt="MH" data-country-rate="0">Маршаллові острови</option>
+                                                            <option value="MX" alt="MX" data-country-rate="0">Мексика</option>
+                                                            <option value="FM" alt="FM" data-country-rate="0">Мікронезія, Федеративні Штати</option>
+                                                            <option value="MZ" alt="MZ" data-country-rate="0">Мозамбік</option>
+                                                            <option value="MD" alt="MD" data-country-rate="0">Молдова</option>
+                                                            <option value="MC" alt="MC" data-country-rate="0">Монако</option>
+                                                            <option value="MN" alt="MN" data-country-rate="0">Монголія</option>
+                                                            <option value="MS" alt="MS" data-country-rate="0">Монтсеррат</option>
+                                                            <option value="MM" alt="MM" data-country-rate="0">М'янма</option>
+                                                            <option value="NA" alt="NA" data-country-rate="0">Намібія</option>
+                                                            <option value="NR" alt="NR" data-country-rate="0">Науру</option>
+                                                            <option value="NP" alt="NP" data-country-rate="0">Непал</option>
+                                                            <option value="NE" alt="NE" data-country-rate="0">Нігер</option>
+                                                            <option value="NG" alt="NG" data-country-rate="0">Нігерія</option>
+                                                            <option value="NL" alt="NL" data-country-rate="0">Нідерланди</option>
+                                                            <option value="AN" alt="AN" data-country-rate="0">Нідерландські Антильські острови</option>
+                                                            <option value="NI" alt="NI" data-country-rate="0">Нікарагуа</option>
+                                                            <option value="DE" alt="DE" data-country-rate="0">Німеччина</option>
+                                                            <option value="NU" alt="NU" data-country-rate="0">Ніуе</option>
+                                                            <option value="NZ" alt="NZ" data-country-rate="0">Нова Зеландія</option>
+                                                            <option value="NC" alt="NC" data-country-rate="0">Нова Каледонія</option>
+                                                            <option value="NO" alt="NO" data-country-rate="0">Норвегія</option>
+                                                            <option value="AE" alt="AE" data-country-rate="0">Об'єднані Арабські Емірати</option>
+                                                            <option value="OM" alt="OM" data-country-rate="0">Оман</option>
+                                                            <option value="BV" alt="BV" data-country-rate="0">Острів Буве</option>
+                                                            <option value="AC" alt="AC" data-country-rate="0">Острів Вознесіння</option>
+                                                            <option value="IM" alt="IM" data-country-rate="0">Острів Мен</option>
+                                                            <option value="NF" alt="NF" data-country-rate="0">Острів Норфолк</option>
+                                                            <option value="CX" alt="CX" data-country-rate="0">Острів Різдва</option>
+                                                            <option value="SH" alt="SH" data-country-rate="0">Острів Святої Єлени</option>
+                                                            <option value="HM" alt="HM" data-country-rate="0">Острів Херд і острови Макдональд</option>
+                                                            <option value="WF" alt="WF" data-country-rate="0">Острови Волліс і Футуна</option>
+                                                            <option value="CK" alt="CK" data-country-rate="0">Острови Кука</option>
+                                                            <option value="TC" alt="TC" data-country-rate="0">Острови Теркс і Кейкос</option>
+                                                            <option value="PK" alt="PK" data-country-rate="0">Пакистан</option>
+                                                            <option value="PW" alt="PW" data-country-rate="0">Палау</option>
+                                                            <option value="PS" alt="PS" data-country-rate="0">Палестинська територія</option>
+                                                            <option value="PA" alt="PA" data-country-rate="0">Панама</option>
+                                                            <option value="PG" alt="PG" data-country-rate="0">Папуа - Нова Гвінея</option>
+                                                            <option value="PY" alt="PY" data-country-rate="0">Парагвай</option>
+                                                            <option value="PE" alt="PE" data-country-rate="0">Перу</option>
+                                                            <option value="ZA" alt="ZA" data-country-rate="0">Південна Африка</option>
+                                                            <option value="GS" alt="GS" data-country-rate="0">Південна Джорджія та Південні Сандвічеві острови</option>
+                                                            <option value="SS" alt="SS" data-country-rate="0">Південний Судан</option>
+                                                            <option value="MP" alt="MP" data-country-rate="0">Північні Маріанські острови</option>
+                                                            <option value="PN" alt="PN" data-country-rate="0">Піткерн</option>
+                                                            <option value="PL" alt="PL" data-country-rate="0">Польща</option>
+                                                            <option value="PT" alt="PT" data-country-rate="0">Португалія</option>
+                                                            <option value="PR" alt="PR" data-country-rate="0">Пуерто-Ріко</option>
+                                                            <option value="RE" alt="RE" data-country-rate="0">Реюньйон</option>
+                                                            <option value="RU" alt="RU" data-country-rate="0">Російська Федерація</option>
+                                                            <option value="RW" alt="RW" data-country-rate="0">Руанда</option>
+                                                            <option value="RO" alt="RO" data-country-rate="0">Румунія</option>
+                                                            <option value="SV" alt="SV" data-country-rate="0">Сальвадор</option>
+                                                            <option value="WS" alt="WS" data-country-rate="0">Самоа</option>
+                                                            <option value="SM" alt="SM" data-country-rate="0">Сан-Марино</option>
+                                                            <option value="ST" alt="ST" data-country-rate="0">Сан-Томе і Принсіпі</option>
+                                                            <option value="SA" alt="SA" data-country-rate="0">Саудівська Аравія</option>
+                                                            <option value="SZ" alt="SZ" data-country-rate="0">Свазіленд</option>
+                                                            <option value="SJ" alt="SJ" data-country-rate="0">Свальбард і Ян-Маєн</option>
+                                                            <option value="VA" alt="VA" data-country-rate="0">Святий Престол</option>
+                                                            <option value="SC" alt="SC" data-country-rate="0">Сейшельські острови</option>
+                                                            <option value="BL" alt="BL" data-country-rate="0">Сен-Бартельмі</option>
+                                                            <option value="SN" alt="SN" data-country-rate="0">Сенегал</option>
+                                                            <option value="MF" alt="MF" data-country-rate="0">Сен-Мартен</option>
+                                                            <option value="PM" alt="PM" data-country-rate="0">Сен-П'єр і Мікелон</option>
+                                                            <option value="VC" alt="VC" data-country-rate="0">Сент-Вінсент і Гренадини</option>
+                                                            <option value="KN" alt="KN" data-country-rate="0">Сент-Кітс і Невіс</option>
+                                                            <option value="LC" alt="LC" data-country-rate="0">Сент-Люсія</option>
+                                                            <option value="RS" alt="RS" data-country-rate="0">Сербія</option>
+                                                            <option value="EA" alt="EA" data-country-rate="0">Сеута і Мелілья</option>
+                                                            <option value="SG" alt="SG" data-country-rate="0">Сінгапур</option>
+                                                            <option value="SX" alt="SX" data-country-rate="0">Сінт-Мартен</option>
+                                                            <option value="SK" alt="SK" data-country-rate="0">Словацька Республіка</option>
+                                                            <option value="SI" alt="SI" data-country-rate="0">Словенія</option>
+                                                            <option value="SB" alt="SB" data-country-rate="0">Соломонові острови</option>
+                                                            <option value="US" alt="US" data-country-rate="0">Сполучені Штати Америки</option>
+                                                            <option value="SR" alt="SR" data-country-rate="0">Суринам</option>
+                                                            <option value="TL" alt="TL" data-country-rate="0">Східний Тимор</option>
+                                                            <option value="TJ" alt="TJ" data-country-rate="0">Таджикистан</option>
+                                                            <option value="TW" alt="TW" data-country-rate="0">Тайвань</option>
+                                                            <option value="TH" alt="TH" data-country-rate="0">Таїланд</option>
+                                                            <option value="TZ" alt="TZ" data-country-rate="0">Танзанія, Об'єднана Республіка</option>
+                                                            <option value="TG" alt="TG" data-country-rate="0">Того</option>
+                                                            <option value="TK" alt="TK" data-country-rate="0">Токелау</option>
+                                                            <option value="TO" alt="TO" data-country-rate="0">Тонга</option>
+                                                            <option value="TT" alt="TT" data-country-rate="0">Тринідад і Тобаго</option>
+                                                            <option value="TA" alt="TA" data-country-rate="0">Тристан-да-Кунья</option>
+                                                            <option value="TV" alt="TV" data-country-rate="0">Тувалу</option>
+                                                            <option value="TN" alt="TN" data-country-rate="0">Туніс</option>
+                                                            <option value="TR" alt="TR" data-country-rate="0">Туреччина</option>
+                                                            <option value="TM" alt="TM" data-country-rate="0">Туркменістан</option>
+                                                            <option value="UG" alt="UG" data-country-rate="0">Уганда</option>
+                                                            <option value="HU" alt="HU" data-country-rate="0">Угорщина</option>
+                                                            <option value="UZ" alt="UZ" data-country-rate="0">Узбекистан</option>
+                                                            <option selected="&quot;selected&quot;" value="UA" alt="UA" data-country-rate="0">Україна</option>
+                                                            <option value="UY" alt="UY" data-country-rate="0">Уругвай</option>
+                                                            <option value="FO" alt="FO" data-country-rate="0">Фарерські острови</option>
+                                                            <option value="FJ" alt="FJ" data-country-rate="0">Фіджи</option>
+                                                            <option value="PH" alt="PH" data-country-rate="0">Філіппіни</option>
+                                                            <option value="FI" alt="FI" data-country-rate="0">Фінляндія</option>
+                                                            <option value="FK" alt="FK" data-country-rate="0">Фолклендські (Мальвінські) острови</option>
+                                                            <option value="FR" alt="FR" data-country-rate="0">Франція</option>
+                                                            <option value="GF" alt="GF" data-country-rate="0">Французька Гвіана</option>
+                                                            <option value="QO" alt="QO" data-country-rate="0">Французька Океанія</option>
+                                                            <option value="PF" alt="PF" data-country-rate="0">Французька Полінезія</option>
+                                                            <option value="TF" alt="TF" data-country-rate="0">Французькі Південні Території</option>
+                                                            <option value="HR" alt="HR" data-country-rate="0">Хорватія</option>
+                                                            <option value="CF" alt="CF" data-country-rate="0">Центрально-Африканська Республіка</option>
+                                                            <option value="TD" alt="TD" data-country-rate="0">Чад</option>
+                                                            <option value="CZ" alt="CZ" data-country-rate="0">Чеська Республіка</option>
+                                                            <option value="CL" alt="CL" data-country-rate="0">Чілі</option>
+                                                            <option value="ME" alt="ME" data-country-rate="0">Чорногорія</option>
+                                                            <option value="CH" alt="CH" data-country-rate="0">Швейцарія</option>
+                                                            <option value="SE" alt="SE" data-country-rate="0">Швеція</option>
+                                                            <option value="LK" alt="LK" data-country-rate="0">Шрі-Ланка</option>
+                                                            <option value="JM" alt="JM" data-country-rate="0">Ямайка</option>
+                                                            <option value="JP" alt="JP" data-country-rate="0">Японія</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group  phone-block ">
+                                                    <div class="col-lg-12" data-content="">
+                                                        <input type="phone" placeholder="Номер телефону" class="form-control input-sm" id="phone" value="+1-001-12345679" name="billing-contact-phone" required="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group  licensee-block ">
+                                            <div class="col-lg-12">
+                                                <div class="checkbox in-form">
+                                                    <label class="checkbox-label">Ліцензія для іншої особи.
+                                                        <input type="checkbox" value="True" name="use-license-info">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+
+                                                <div class="form-group  licensee-name-block hidden licensee ">
+                                                    <div class="col-lg-12" data-content="">
+                                                        <input type="text" placeholder="Ім'я ліцензіата *" class="form-control input-sm" id="licensee" name="license-name" required="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+
+                                                <div class="form-group  licensee-email-block hidden licensee ">
+                                                    <div class="col-lg-12" data-content="">
+                                                        <input type="text" placeholder="Email ліцензіата *" class="form-control input-sm" id="lic_email" name="license-email" required="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-sm-6 col-md-5 col-md-offset-1 payment-margin">
+                        <div class="payment-info">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="sub-header">Виберіть метод оплати</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group payment-method-block">
+                                        <div class="col-md-12">
+                                            <select class="form-control input-sm primary-payment-methods select2-source__no-search" name="payment-method"  tabindex="-1">
+                                                <option class="primary-pm-1" value="1" selected="selected">
+                                                    Кредитна / Дебетова Карта
+                                                </option>
+                                                <option class="primary-pm-14" value="14">
+                                                    PayPal
+                                                </option>
+                                                <option class="primary-pm-36" value="36">
+                                                    QIWI
+                                                </option>
+                                                <option class="primary-pm-31" value="31">
+                                                    WebMoney
+                                                </option>
+                                                <option class="primary-pm-32" value="32">
+                                                    Яндекс.Гроші
+                                                </option>
+                                                <option class="primary-pm-15" value="15">
+                                                    Грошовий переказ
+                                                </option>
+                                                <option class="primary-pm-30" value="30">
+                                                    Замовлення на закупівлю
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <select class="form-control input-sm secondary-payment-methods select2-source__no-search" name="secondary-payment-method" data-action="PaymentMethodChange">
+                                                <option class="secondary-pm-2" value="2" selected="selected">
+                                                    Visa
+                                                </option>
+                                                <option class="secondary-pm-3" value="3">
+                                                    MasterCard
+                                                </option>
+                                                <option class="secondary-pm-4" value="4">
+                                                    American Express
+                                                </option>
+                                                <option class="secondary-pm-7" value="7">
+                                                    JCB
+                                                </option>
+                                                <option class="secondary-pm-6" value="6">
+                                                    Discover
+                                                </option>
+                                                <option class="secondary-pm-5" value="5">
+                                                    Diners
+                                                </option>
+                                                <option class="secondary-pm-44" value="44">
+                                                    CarteBleue
+                                                </option>
+                                                <option class="secondary-pm-9" value="9">
+                                                    Maestro
+                                                </option>
+                                                <option class="secondary-pm-8" value="8">
+                                                    Solo
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="blue-bg">
+                                        <div class="form-group cardnum-block ">
+                                            <div class="col-md-12">
+                                                <input placeholder="Номер картки *" type="text" class="form-control input-sm" id="cardnum" value="" name="cc-number" required="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group expdate-block ">
+                                            <label for="ed_month" class="col-md-12 control-label">Термін дії *</label>
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <select class="form-control input-sm select2-source__no-search" name="cc-expire-month" id="ed_month" tabindex="-1" title="Термін дії*">
+                                                            <option value="1">01</option>
+                                                            <option value="2">02</option>
+                                                            <option value="3">03</option>
+                                                            <option value="4">04</option>
+                                                            <option value="5">05</option>
+                                                            <option value="6" selected="selected">06</option>
+                                                            <option value="7">07</option>
+                                                            <option value="8">08</option>
+                                                            <option value="9">09</option>
+                                                            <option value="10">10</option>
+                                                            <option value="11">11</option>
+                                                            <option value="12">12</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <select class="form-control input-sm select2-source__no-search"  id="ed_year" name="cc-expire-year" tabindex="-1" title="">
+                                                            <option value="2020">20</option>
+                                                            <option value="2021">21</option>
+                                                            <option value="2022">22</option>
+                                                            <option value="2023">23</option>
+                                                            <option value="2024">24</option>
+                                                            <option value="2025">25</option>
+                                                            <option value="2026">26</option>
+                                                            <option value="2027">27</option>
+                                                            <option value="2028">28</option>
+                                                            <option value="2029">29</option>
+                                                            <option value="2030">30</option>
+                                                            <option value="2031">31</option>
+                                                            <option value="2032">32</option>
+                                                            <option value="2033">33</option>
+                                                            <option value="2034">34</option>
+                                                            <option value="2035">35</option>
+                                                            <option value="2036">36</option>
+                                                            <option value="2037">37</option>
+                                                            <option value="2038">38</option>
+                                                            <option value="2039">39</option>
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group secnum-block ">
+                                            <div class="col-md-12">
+                                                <input type="text" placeholder="Код безпеки *" class="form-control input-sm" id="secnum" value="612" name="cc-cvv" required="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group issue-block hidden">
+                                            <div class="col-md-12">
+                                                <input placeholder="Номер випуску *" type="text" class="form-control input-sm" id="issue" value="" name="cc-issue-number" required="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="order-total text-right col-md-12">
+                            <span>Всього:</span>
+                            <span class="new-price">
+                                <span class="billing-currency">
+                                    <span class="price-amount">27<i>.96</i></span>
+                                    <span class="price-currency">UAH</span>
+                                </span>
+                            </span>
+                        </div>
+
+                        <div class="submit-area text-right col-md-12">
+                            <button type="submit" name="submit-button" value="True" class="btn btn-submit-checkout btn-lg">Розмістити замовлення</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="greeting row">
+        <div class="col-md-12 text-center">
+            <h2>Дякуємо що вибрали нас!</h2>
+            <p>Наш менеджер звяжеться з вами для надання подальших інструкцій</p>
+        </div>
+
+    </div>
+
+    <div class="ui-elements d-none">
+        <h3>
+            ui elements manual
+        </h3>
+        <h1>
+            <span class="gradient-text">
+                hello i am a gradient test with class=gradient-text
+            </span>
+            <p>
+                here is the material icons bundle icon
+                <span class="material-icons">
+                    alarm_on
+                </span>
+            </p>
+        </h1>
+        <div>
+            <p>
+                Hello i am a <a class="link-in-text" href="#">link in text </a> with class=link-in-text
+            </p>
+        </div>
+        <h2 class="gradient-background">
+            <p>
+                Gradient background for block
+                just add class=gradient-background to the block
+            </p>
+        </h2>
+
+        <h2>
+            i am an <a class="link active" href="#">active link</a> with active color with class=active
+        </h2>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>

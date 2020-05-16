@@ -3,7 +3,7 @@
     background: linear-gradient(to right,#115cac,#ff2368);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-align: center;
+
 }
 .gradient-background {
     background: linear-gradient(to right,#115cac,#ff2368);
@@ -19,4 +19,11 @@
     color: #fff;
     text-decoration: none!important;
 }
+
+.form-control {
+    border-radius: 0;
+}
+
+
+
 

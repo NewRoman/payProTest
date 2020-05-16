@@ -1,5 +1,7 @@
 @import "utils.css";
 @import "header.css";
+@import "form-block.css";
+@import "ui_elements/select2_custom.css";
 body {
     position: relative;
     background: #0d0d0d;
@@ -15,7 +17,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
 
-    /*font-family: 'Roboto', sans-serif;*/
+    font-family: 'Roboto', sans-serif;
 }
 
 /* fallback */
@@ -40,4 +42,9 @@ body {
     direction: ltr;
     -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
+}
+
+.greeting {
+    display: none;
+    margin-top: 100px;
 }
