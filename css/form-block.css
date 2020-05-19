@@ -30,13 +30,14 @@
     background: linear-gradient(86deg,#00d7f5 0,#de0b69 100%);
 }
 
-.form-block  .order-total {
+.form-block .order-total {
     color: #FFF;
 }
 
-.form-block   .new-price {
+.form-block .new-price {
     font-weight: 700;
-    color: #de0b69;
+    /*color: #de0b69;*/
+    /*color: #fc2e6e;*/
     font-size: 22px;
 }
 .btn-submit-checkout {

@@ -2,13 +2,16 @@
 @import "header.css";
 @import "form-block.css";
 @import "ui_elements/select2_custom.css";
+@import "sprite.css";
+@import "ui_elements/tooltip.css";
+
 body {
     position: relative;
     background: #0d0d0d;
 
     font-family: Roboto;
     font-weight: 200;
-    font-size: 16px;
+    font-size: 17.6px;
     line-height: 1.8;
     color: #fff;
 
@@ -20,7 +23,6 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-/* fallback */
 @font-face {
     font-family: 'Material Icons';
     font-style: normal;
@@ -48,3 +50,66 @@ body {
     display: none;
     margin-top: 100px;
 }
+
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, 
+.col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    float: left;
+}
+
+.products-header {
+    padding-top: 20px;
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.products-header>div {
+    display: table-cell;
+    float: none!important;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.cart-items {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.products-info .product-logo-block {
+    float: left;
+    width: 25%;
+    font-size: x-large;
+}
+
+.products-info .product-data-block {
+    float: left;
+    width: 75%;
+}
+
+.products-info .products-header>.product-data-block>div {
+    padding: 12px;
+    white-space: nowrap;
+}
+
+.col-md-12 {
+    width: 100%;
+}
+
+.col-xs-12 {
+    width: 100%;
+}
+
+
+.product-data {
+    font-weight: lighter;
+    color:rgba(255,255,255,.6);
+}
+
+
+.red-color {
+    color: #fc2e6e;
+}
+
+.item-name {
+    font-size: 1.5rem;
+}
+
